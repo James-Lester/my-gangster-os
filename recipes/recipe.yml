@@ -17,14 +17,6 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - type: rpm-ostree
-    repos:
-      - https://repository.mullvad.net/rpm/stable/mullvad.repo
-    optfix:
-      - mullvad-vpn
-    install:
-      - mullvad-vpn
-
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
@@ -41,15 +33,13 @@ modules:
         - us.zoom.Zoom
         - com.visualstudio.code
         - org.videolan.VLC
-      remove:
-        - org.gnome.eog
+        - com.valvesoftware.Steam
     user:
       repo-name: flathub
 
   - type: bling
     install:
       - 1password
-      - rpmfusion
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
