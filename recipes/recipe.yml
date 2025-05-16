@@ -18,6 +18,16 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: dnf
+    repos:
+      files:
+        - https://repository.mullvad.net/rpm/stable/mullvad.repo
+    optfix:
+      - Mullvad VPN
+    install:
+      packages:
+        - mullvad-vpn
+
+  - type: dnf
     install:
       packages:
         - firefox
