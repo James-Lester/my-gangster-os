@@ -49,6 +49,7 @@ modules:
         - com.visualstudio.code
         - org.videolan.VLC
         - com.valvesoftware.Steam
+        - org.onlyoffice.desktopeditors
       remove:
         - org.mozilla.firefox
     user:
