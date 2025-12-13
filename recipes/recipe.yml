@@ -6,7 +6,7 @@ name: my-gangster-os
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bluefin-nvidia-open
+base-image: ghcr.io/ublue-os/bluefin-dx-nvidia-open
 image-version: stable # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -49,7 +49,6 @@ modules:
           - org.signal.Signal
           - dev.vencord.Vesktop
           - us.zoom.Zoom
-          - com.visualstudio.code
           - org.videolan.VLC
           - com.valvesoftware.Steam
           - org.onlyoffice.desktopeditors
